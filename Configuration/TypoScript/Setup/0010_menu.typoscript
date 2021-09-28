@@ -1,0 +1,6 @@
+menu.10.fields {
+    modulesNavigation =< lib.elearningModulesNavigation
+    pagesNavigation =< lib.otherPagesNavigation
+    specialPagesNavigation =< lib.specialPagesNavigation
+    // moduleBulletNavigation =< lib.moduleBulletNavigation
+}

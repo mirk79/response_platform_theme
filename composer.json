@@ -1,0 +1,31 @@
+{
+  "name": "response/response_platform_theme",
+  "type": "typo3-cms-extension",
+  "version": "1.0.0",
+  "minimum-stability": "stable",
+  "description": "Response Platform – Site package",
+  "require": {
+    "typo3/cms-core": "^10.4",
+    "itplusx/headless-gridelements": "^2.0",
+    "friendsoftypo3/headless": "^2.5",
+    "gridelementsteam/gridelements": "^10.2",
+    "mask/mask": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Response\\ResponsePlatformTheme\\": "Classes"
+    }
+  },
+  "authors": [
+    {
+      "name": "Mirko Leyh",
+      "role": "Developer",
+      "email": "mail@mirkoleyh.de"
+    },
+    {
+      "name": "TYPO3 PWA Initiative",
+      "role": "Developer",
+      "email": "extensions@macopedia.pl"
+    }
+  ]
+}

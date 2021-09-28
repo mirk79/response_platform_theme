@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2021-06-12UTC17:30:050">
+        <header>
+            <authorName>Mirko Leyh</authorName>
+            <authorEmail>mail@mirkoleyh.de</authorEmail>
+        </header>
+        <body>
+
+            <!-- Backend Layouts -->
+            <trans-unit id="backend_layout.page.main">
+                <source>Pages: Main Page</source>
+                <target>Seiten: Einstiegsseite</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.page.sub">
+                <source>Pages: Sub Page</source>
+                <target>Seiten: Unterseite</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.slide.title">
+                <source>Slides: Title Slide</source>
+                <target>Folien: Titelfolie</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.slide.std">
+                <source>Slides: Standard Slide</source>
+                <target>Folien: Normale Folie</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.glossary">
+                <source>Glossary</source>
+                <target>Glossar</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.page.content">
+                <source>Page Content</source>
+                <target>Seiteninhalt</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.slide.content">
+                <source>Slide Content</source>
+                <target>Folieninhalt</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.slide.audiotrack">
+                <source>Audio track</source>
+                <target>Audiospur</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.glossary.content">
+                <source>Glossary Content</source>
+                <target>Glossarinhalt</target>
+            </trans-unit>
+
+            <!-- Pages: Page Color -->
+            <trans-unit id="pages.pagecolor" xml:space="preserve">
+                <source>Page Color</source>
+                <target>Seitenfarbe</target>
+            </trans-unit>
+
+            <!-- Pages: alt labels -->
+            <trans-unit id="pages.labels.subtitle" xml:space="preserve">
+                <source>Subtitle (alternative page title)</source>
+                <target>Untertitel (alternativer Seitentitel)</target>
+            </trans-unit>
+
+            <!-- Pages: Teaser/Media Image -->
+            <!--
+            <trans-unit id="pages.teaserimage" xml:space="preserve">
+                <source>Teaser Image</source>
+                <target>Teaserbild</target>
+            </trans-unit>
+            <trans-unit id="pages.media.og" xml:space="preserve">
+                <source>Media Image in Open Graph size (1.91:1)</source>
+                <target>Media-Bild in Open-Graph-Größe (1,91:1)</target>
+            </trans-unit>
+            <trans-unit id="pages.media.por" xml:space="preserve">
+                <source>Media Image in Portrait Mode 1:2 (for Background Picture, Smartphones Portrait Mode)</source>
+                <target>Media-Bild hochkant 1:2 (für Hintergrundbild, Smartphones Portrait-Modus)</target>
+            </trans-unit>
+            <trans-unit id="pages.media.sq" xml:space="preserve">
+                <source>Squared Media Image (for Background Picture, narrow screens)</source>
+                <target>Quadratisches Media-Bild (für Hintergrundbild, schmale Bildschirme)</target>
+            </trans-unit>
+            <trans-unit id="pages.media.wd" xml:space="preserve">
+                <source>16:9 Media Image (for Background Picture, Landscape Mode)</source>
+                <target>16:9 Media-Bild (für Hintergrundbild, Landscape-Modus)</target>
+            </trans-unit>
+            <trans-unit id="pages.media.xwd" xml:space="preserve">
+                <source>2:1 Media Image (for Background Picture, wide screens)</source>
+                <target>2:1 Media-Bild (für Hintergrundbild, breite Bildschirme)</target>
+            </trans-unit>
+            -->
+
+            <!-- Content Elements -->
+            <trans-unit id="contentelements.header_layout" xml:space="preserve">
+				<source>Title type</source>
+				<target>Titel-Art</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_layout.h1" xml:space="preserve">
+				<source>H1 (Page title)</source>
+                <target>H1 (Seitentitel)</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_layout.h2" xml:space="preserve">
+				<source>H2</source>
+                <target>H2</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_layout.h3" xml:space="preserve">
+				<source>H3</source>
+                <target>H3</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_layout.h4" xml:space="preserve">
+				<source>H4</source>
+                <target>H4</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_layout.h5" xml:space="preserve">
+				<source>H5</source>
+                <target>H5</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_layout.hidden" xml:space="preserve">
+				<source>hidden in frontend</source>
+                <target>im Frontend verborgen</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_position" xml:space="preserve">
+				<source>Title style (overrides appearance of title type)</source>
+				<target>Titel-Stil (überschreibt Aussehen der Titel-Art)</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_position.h1-style" xml:space="preserve">
+				<source>H1 styling</source>
+				<target>H1-Styling</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_position.h2-style" xml:space="preserve">
+				<source>H2 styling</source>
+				<target>H2-Styling</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_position.h3-style" xml:space="preserve">
+				<source>H3 styling</source>
+				<target>H3-Styling</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_position.h4-style" xml:space="preserve">
+				<source>H4 styling</source>
+				<target>H4-Styling</target>
+			</trans-unit>
+            <trans-unit id="contentelements.header_position.h5-style" xml:space="preserve">
+				<source>H5 styling</source>
+				<target>H5-Styling</target>
+			</trans-unit>
+            <trans-unit id="contentelements.rte.p.small" xml:space="preserve">
+				<source>Small text paragraph</source>
+				<target>Absatz mit kleinem Text</target>
+			</trans-unit>
+            <trans-unit id="contentelements.rte.p.large" xml:space="preserve">
+				<source>Large text paragraph</source>
+				<target>Absatz mit großem Text</target>
+			</trans-unit>
+            <trans-unit id="contentelements.rte.a.button" xml:space="preserve">
+				<source>Link as button (normal)</source>
+				<target>Link als Button (normal)</target>
+			</trans-unit>
+            <trans-unit id="contentelements.rte.a.button.large" xml:space="preserve">
+				<source>Link as button (groß)</source>
+				<target>Link als Button (groß)</target>
+			</trans-unit>
+            <trans-unit id="contentelements.rte.hr.dotted" xml:space="preserve">
+				<source>Dotted line</source>
+				<target>Gepunktete Linie</target>
+			</trans-unit>
+            <trans-unit id="contentelements.rte.list.highlighted" xml:space="preserve">
+				<source>Highlighted list</source>
+				<target>Highlight-Liste</target>
+			</trans-unit>
+
+			<trans-unit id="contentelements.imageorient.slideshow" xml:space="preserve">
+				<source>Slideshow</source>
+				<target>Slideshow</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.slideshow.abovetext" xml:space="preserve">
+				<source>Slideshow above the text</source>
+				<target>Slideshow über dem Text</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.slideshow.belowtext" xml:space="preserve">
+				<source>Slideshow below the text</source>
+				<target>Slideshow unter dem Text</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.slideshow.listleft" xml:space="preserve">
+				<source>Slideshow with captions as a list on the left</source>
+				<target>Slideshow mit Bildunterschriften als Liste links</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imageorient.slideshow.listright" xml:space="preserve">
+				<source>Slideshow with captions as a list on the right</source>
+				<target>Slideshow mit Bildunterschriften als Liste rechts</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imageorient.slideshow.abovetext.listleft" xml:space="preserve">
+				<source>Slideshow above the text, with captions as a list on the left</source>
+				<target>Slideshow über dem Text, mit Bildunterschriften als Liste links</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imageorient.slideshow.abovetext.listright" xml:space="preserve">
+				<source>Slideshow above the text, with captions as a list on the right</source>
+				<target>Slideshow über dem Text, mit Bildunterschriften als Liste rechts</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.slideshow.belowtext.listleft" xml:space="preserve">
+				<source>Slideshow below the text, with captions as a list on the left</source>
+				<target>Slideshow unter dem Text, mit Bildunterschriften als Liste links</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imageorient.slideshow.belowtext.listright" xml:space="preserve">
+				<source>Slideshow below the text, wwith captions as a list on the right</source>
+				<target>Slideshow unter dem Text, mit Bildunterschriften als Liste rechts</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.slideshow.intext.left" xml:space="preserve">
+				<source>Slideshow in the text, left-sided</source>
+				<target>Slideshow im Text links</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.slideshow.intext.right" xml:space="preserve">
+				<source>Slideshow in the text, right-sided</source>
+				<target>Slideshow im Text rechts</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.carousels" xml:space="preserve">
+				<source>Carousel variants</source>
+				<target>Karussell-Varianten</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imageorient.carousel.horizontal" xml:space="preserve">
+				<source>Carousel horizontal</source>
+				<target>Karussell horizontal</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imageorient.carousel.vertical" xml:space="preserve">
+				<source>Carousel vertical</source>
+				<target>Karussell vertikal</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.carousel.vertical.intext.left" xml:space="preserve">
+				<source>Carousel vertical in the text, left-sided</source>
+				<target>Karussell vertikal im Text links</target>
+			</trans-unit>
+			<trans-unit id="contentelements.imageorient.carousel.vertical.intext.right" xml:space="preserve">
+				<source>Carousel vertical in the text, right-sided</source>
+				<target>Karussell vertikal im Text rechts</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imageorient.carousel.diagonal" xml:space="preserve">
+				<source>Carousel diagonal</source>
+				<target>Karussell diagonal</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imageorient.carousel.picheap" xml:space="preserve">
+				<source>Carousel as a heap of images</source>
+				<target>Karussell als Bilderhaufen</target>
+			</trans-unit>
+            
+            <trans-unit id="contentelements.layout.default" xml:space="preserve">
+				<source>no extras (default)</source>
+				<target>keine Extras (Standard)</target>
+			</trans-unit>
+            <trans-unit id="contentelements.layout.highlightBox" xml:space="preserve">
+				<source>highlight box</source>
+				<target>Highlight-Box</target>
+			</trans-unit>
+			<trans-unit id="contentelements.layout.borderedBox" xml:space="preserve">
+				<source>bordered box</source>
+				<target>Umrandete Box</target>
+			</trans-unit>
+
+            <trans-unit id="contentelements.imagecrop.default" xml:space="preserve">
+				<source>Standard crop variants</source>
+				<target>Standard-Beschnittvarianten</target>
+			</trans-unit>
+            <trans-unit id="contentelements.imagecrop.free" xml:space="preserve">
+				<source>free</source>
+				<target>frei</target>
+			</trans-unit>
+
+            <trans-unit id="contentelements.additional_settings" xml:space="preserve">
+				<source>Additional settings</source>
+				<target>Weitere Einstellungen</target>
+			</trans-unit>
+            <trans-unit id="contentelements.options" xml:space="preserve">
+				<source>Special options</source>
+				<target>Spezialoptionen</target>
+			</trans-unit>
+            <trans-unit id="contentelements.options.audiosync" xml:space="preserve">
+				<source>Sync content element with pages audiotrack</source>
+				<target>Inhaltselement mit Seiten-Audiotrack synchronisieren</target>
+			</trans-unit>
+
+            <!-- Grid Elements -->
+            <trans-unit id="gridelements.title.1ColumnGrid" xml:space="preserve">
+				<source>Container with one column</source>
+				<target>Container mit einer Spalte</target>
+			</trans-unit>
+            <trans-unit id="gridelements.title.2ColumnGrid" xml:space="preserve">
+				<source>Container with two columns</source>
+				<target>Container mit zwei Spalten</target>
+			</trans-unit>
+            <trans-unit id="gridelements.title.3ColumnGrid" xml:space="preserve">
+				<source>Container with three columns</source>
+				<target>Container mit drei Spalten</target>
+			</trans-unit>
+
+            <trans-unit id="gridelements.desc.1ColumnGrid" xml:space="preserve">
+				<source>For combining several content elements in one container, for example for highlight boxes.</source>
+				<target>Zum Zusammenfassen mehrerer Inhaltselemente in einem Container, zum Beispiel für Highlight-Boxen.</target>
+			</trans-unit>
+            <trans-unit id="gridelements.desc.2ColumnGrid" xml:space="preserve">
+				<source>For arranging content items in two columns.</source>
+				<target>Zum Anordnen von Inhaltselementen in zwei Spalten.</target>
+			</trans-unit>
+            <trans-unit id="gridelements.desc.3ColumnGrid" xml:space="preserve">
+				<source>For arranging content items in three columns.</source>
+				<target>Zum Anordnen von Inhaltselementen in drei Spalten.</target>
+			</trans-unit>
+
+            <trans-unit id="gridelements.column.content" xml:space="preserve">
+				<source>Container content</source>
+				<target>Containerinhalt</target>
+			</trans-unit>
+            <trans-unit id="gridelements.column.left" xml:space="preserve">
+				<source>Left column</source>
+				<target>Linke Spalte</target>
+			</trans-unit>
+            <trans-unit id="gridelements.column.center" xml:space="preserve">
+				<source>Centre column</source>
+				<target>Mittlere Spalte</target>
+			</trans-unit>
+            <trans-unit id="gridelements.column.right" xml:space="preserve">
+				<source>Right column</source>
+				<target>Rechte Spalte</target>
+			</trans-unit>
+
+            <trans-unit id="gridelements.grid_options" xml:space="preserve">
+				<source>Settings for the grid element</source>
+				<target>Einstellungen für das Rasterelement</target>
+			</trans-unit>
+			<trans-unit id="gridelements.grid_option_flexbox" xml:space="preserve">
+				<source>Use Flexbox for columns</source>
+				<target>Benutze Flexbox für Spalten</target>
+			</trans-unit>
+            <trans-unit id="gridelements.settings_responsive_columns" xml:space="preserve">
+				<source>Settings for responsive column widths</source>
+				<target>Einstellungen für responsive Spaltenbreiten</target>
+			</trans-unit>
+            <trans-unit id="gridelements.column_widths_large" xml:space="preserve">
+				<source>Large devices (laptops, desktops)</source>
+				<target>Große Geräte (Laptops, Desktops)</target>
+			</trans-unit>
+            <trans-unit id="gridelements.column_widths_medium" xml:space="preserve">
+				<source>Medium-sized devices (tablets, netbooks)</source>
+				<target>Mittelgroße Geräte (Tablets, Netbooks)</target>
+			</trans-unit>
+            <trans-unit id="gridelements.column_widths_small" xml:space="preserve">
+				<source>Small devices (smartphones)</source>
+				<target>Kleine Geräte (Smartphones)</target>
+			</trans-unit>
+
+        </body>
+    </file>
+</xliff>

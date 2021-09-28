@@ -1,0 +1,169 @@
+{
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_audiotrack_audiofile": {
+                "sys_file_reference": {
+                    "tx_mask_audiotrack_audiofile": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_audiotrack_subtitles": {
+                "sys_file_reference": {
+                    "tx_mask_audiotrack_subtitles": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    },
+    "tt_content": {
+        "elements": {
+            "audiotrack": {
+                "color": "rgb(40, 39, 132)",
+                "columns": [
+                    "header",
+                    "tx_mask_audiotrack_audiofile",
+                    "tx_mask_audiotrack_subtitles",
+                    "tx_mask_audiotrack_markers"
+                ],
+                "description": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.meta.desc",
+                "hidden": "0",
+                "icon": "fa-file-audio-o",
+                "key": "audiotrack",
+                "label": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.meta.title",
+                "labels": [
+                    "",
+                    "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.audiofile",
+                    "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.subtitles",
+                    "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markers"
+                ],
+                "shortLabel": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.meta.shorttitle"
+            }
+        },
+        "sql": {
+            "tx_mask_audiotrack_audiofile": {
+                "tt_content": {
+                    "tx_mask_audiotrack_audiofile": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_audiotrack_markers": {
+                "tt_content": {
+                    "tx_mask_audiotrack_markers": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_audiotrack_subtitles": {
+                "tt_content": {
+                    "tx_mask_audiotrack_subtitles": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "header": {
+                "coreField": 1,
+                "key": "header",
+                "name": "string"
+            },
+            "tx_mask_audiotrack_audiofile": {
+                "allowedFileExtensions": "mp3",
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "maxitems": "1",
+                    "minitems": "0"
+                },
+                "description": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.audiofile.desc",
+                "imageoverlayPalette": 0,
+                "key": "audiotrack_audiofile",
+                "l10n_mode": "",
+                "name": "file",
+                "options": "file"
+            },
+            "tx_mask_audiotrack_markers": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "bottom",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1,
+                        "useSortable": 1
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "minitems": "0",
+                    "type": "inline"
+                },
+                "ctrl": {
+                    "iconfile": "EXT:response_platform_theme\/Resources\/Public\/Extensions\/Mask\/mask_audiotrack_marker.svg",
+                    "label": "tx_mask_audiotrack_marker"
+                },
+                "description": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markers.desc",
+                "key": "audiotrack_markers",
+                "l10n_mode": "",
+                "name": "inline"
+            },
+            "tx_mask_audiotrack_subtitles": {
+                "allowedFileExtensions": "vtt",
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "maxitems": "1",
+                    "minitems": "0"
+                },
+                "description": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.subtitles.desc",
+                "imageoverlayPalette": 0,
+                "key": "audiotrack_subtitles",
+                "l10n_mode": "",
+                "name": "file",
+                "options": "file"
+            }
+        }
+    },
+    "tx_mask_audiotrack_markers": {
+        "sql": {
+            "tx_mask_audiotrack_marker": {
+                "tx_mask_audiotrack_markers": {
+                    "tx_mask_audiotrack_marker": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_audiotrack_markertitle": {
+                "tx_mask_audiotrack_markers": {
+                    "tx_mask_audiotrack_markertitle": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_audiotrack_marker": {
+                "config": {
+                    "eval": "uniqueInPid,nospace",
+                    "is_in": "0123456789:",
+                    "placeholder": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markertime.placeholder",
+                    "type": "input"
+                },
+                "description": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markertime.desc",
+                "inlineParent": "tx_mask_audiotrack_markers",
+                "key": "audiotrack_marker",
+                "l10n_mode": "",
+                "label": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markertime",
+                "name": "string",
+                "order": 2
+            },
+            "tx_mask_audiotrack_markertitle": {
+                "config": {
+                    "eval": "",
+                    "type": "input"
+                },
+                "description": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markertitle.desc",
+                "inlineParent": "tx_mask_audiotrack_markers",
+                "key": "audiotrack_markertitle",
+                "l10n_mode": "",
+                "label": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markertitle",
+                "name": "string",
+                "order": 1
+            }
+        }
+    }
+}

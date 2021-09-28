@@ -1,0 +1,39 @@
+#
+# BACKENDLAYOUT: Slide - Standard Slide
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            slide_std {
+                title = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:backend_layout.slide.std
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 2
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:backend_layout.slide.audiotrack
+                                        colPos = 1
+                                        allowed = mask_audiotrack
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:backend_layout.slide.content
+                                        colPos = 0
+                                        allowed < lib.allowedContent
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:response_platform_theme/Resources/Public/Img/BackendLayouts/BE-Layout-Slide-Std.png
+            }
+        }
+    }
+}

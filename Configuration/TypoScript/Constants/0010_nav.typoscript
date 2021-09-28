@@ -1,0 +1,14 @@
+## Einstiegspunkte für Menüs ...
+# customcategory=menu=Menues
+# customsubcategory=nav_startpoints=Navigation Startpoints
+
+# cat=menu/nav_startpoints/01_modulesnav_startpoint; type=int+; label= Startpoint of Elearning Modules Menu (Page UID)
+nav.startpoint.modulesnav = 29
+# cat=menu/nav_startpoints/02_pagesnav_startpoint; type=int+; label= Startpoint of Other Pages Menu (Page UID)
+nav.startpoint.pagesnav = 44
+
+# customsubcategory=nav_specialpages=Special Pages
+# cat=menu/nav_specialpages/01_homepage; type=int+; label= Homepage (Page UID)
+nav.specialpages.homepage = 1
+# cat=menu/nav_specialpages/02_glossary; type=int+; label= Glossary (Page UID)
+nav.specialpages.glossary = 45

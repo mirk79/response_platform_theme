@@ -1,0 +1,295 @@
+temp.overwriteMenuLevelConfig {
+    stdWrap.cObject {
+        ## UID
+        100 = TEXT
+        100.field = uid
+        100.wrap = ,"uid":|
+
+        ## pageColor
+        110 = TEXT
+        110.data = levelfield : -1, pagecolor, slide
+        110.wrap = ,"pageColor":"|"
+
+        ## backendLayout
+        120 = TEXT
+        120.field = backend_layout
+        120.ifEmpty {
+            data = levelfield:-1,backend_layout_next_level,slide
+            ifEmpty.ifEmpty = default
+        }
+        120.replacement.10 {
+            search = pagets__
+            replace =
+        }
+        120.wrap = ,"backendLayout":"|"
+
+        # get pageTitle: subtitle, fallback title
+        130 = TEXT
+        130.field = subtitle // title
+        130.wrap = ,"pageTitle":"|"
+    }
+}
+
+/*
+ * See HMENU docs for more options.
+ * https://docs.typo3.org/typo3cms/TyposcriptReference/ContentObjects/Hmenu/Index.html
+ *
+ *
+ * Example TypoScript configuration:
+ *
+ * 10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+ * 10 {
+ *   special = list
+ *   special.value.field = pages
+ *   levels = 7
+ *   as = menu
+ *   expandAll = 1
+ *   includeSpacer = 1
+ *   titleField = nav_title // title
+ *   dataProcessing {
+ *     10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+ *     10 {
+ *        references.fieldName = media
+ *     }
+ *   }
+ */
+
+lib.elearningModulesNavigation = JSON
+lib.elearningModulesNavigation {
+    dataProcessing {
+        10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+        10 {
+            special = directory
+            special.value = {$nav.startpoint.modulesnav}
+            entryLevel = 0
+            levels = 1
+            expandAll = 1
+            includeSpacer = 0
+            titleField = nav_title // subtitle // title
+            as = elearningModulesNavigation
+            overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+        }
+    }
+}
+lib.otherPagesNavigation = JSON
+lib.otherPagesNavigation {
+    dataProcessing {
+        10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+        10 {
+            special = directory
+            special.value = {$nav.startpoint.pagesnav}
+            entryLevel = 0
+            levels = 1
+            expandAll = 1
+            includeSpacer = 0
+            titleField = nav_title // subtitle // title
+            as = otherPagesNavigation
+            overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+        }
+    }
+}
+lib.specialPagesNavigation = JSON
+lib.specialPagesNavigation {
+    fields {
+        homepage = JSON
+        homepage {
+            dataProcessing {
+                10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+                10 {
+                    special = list
+                    special.value = {$nav.specialpages.homepage}
+                    titleField = nav_title // subtitle // title
+                    as = homepage
+                    overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+                }
+            }
+        }
+        glossary = JSON
+        glossary {
+            dataProcessing {
+                10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+                10 {
+                    special = list
+                    special.value = {$nav.specialpages.glossary}
+                    titleField = nav_title // subtitle // title
+                    as = glossary
+                    overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+                }
+            }
+        }
+    }
+}
+
+/* Menü für Bullet Navigation in den Modulen */
+lib.moduleBulletNavigation = JSON
+lib.moduleBulletNavigation {
+    fields {
+        bullets = JSON
+        bullets {
+            fields {
+                title = JSON
+                title {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+                        10 {
+                            special = rootline
+                            special.range = 1|2
+                            levels = 1
+                            expandAll = 1
+                            includeSpacer = 0
+                            titleField = nav_title // subtitle // title
+                            as = moduleBulletNavigation
+                            overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+                        }
+                    }
+                }
+                subs = JSON
+                subs {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+                        10 {
+                            entryLevel = 2
+                            levels = 1
+                            expandAll = 1
+                            includeSpacer = 0
+                            titleField = nav_title // subtitle // title
+                            as = moduleBulletNavigation
+                            overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+## auf Level der Titelfolie ...
+// [tree.level == 1]
+//     lib.moduleBulletNavigation.fields.next.dataProcessing {
+//         10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+//         10 {
+//             special = browse
+//             special {
+//                 items = next
+//                 prevnextToSection = 0
+//             }
+//             levels = 1
+//             expandAll = 1
+//             includeSpacer = 0
+//             titleField = nav_title // title
+//             as = moduleBrowse
+//             overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+//         }
+//     }
+// [global]
+## auf Level der SubFolien: ...
+// [tree.level == 2]
+//     lib.moduleBulletNavigation.fields.prev.dataProcessing {
+//         10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+//         10 {
+//             special = browse
+//             special {
+//                 items = up|prev|next
+//                 prevnextToSection = 0
+//             }
+//             levels = 1
+//             expandAll = 1
+//             includeSpacer = 0
+//             titleField = nav_title // title
+//             as = moduleBrowse
+//             overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+//             // if {
+//             //     value.data = tree.level
+//             //     equals = 2
+//             // }
+//         }
+//     }
+//     lib.moduleBulletNavigation.fields.next.dataProcessing {
+//         10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+//         10 {
+//             special = browse
+//             special {
+//                 items = next
+//                 prevnextToSection = 0
+//             }
+//             levels = 1
+//             expandAll = 1
+//             includeSpacer = 0
+//             titleField = nav_title // title
+//             as = moduleBrowse
+//             overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+//         }
+//     }
+// [global]
+
+/* Menü für Bullet Navigation in den Modulen */
+// lib.moduleBulletNavigation = JSON
+// lib.moduleBulletNavigation {
+//     fields {
+//         modulePages = JSON
+//         modulePages {
+//             dataProcessing {
+//                 10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+//                 10 {
+//                     special = rootline
+//                     special.range = 1|2
+//                     levels = 2
+//                     expandAll = 1
+//                     includeSpacer = 0
+//                     titleField = nav_title // title
+//                     as = modulePages
+//                     overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+//                 }
+//             }
+//         }
+//         moduleBrowse = JSON
+//         moduleBrowse {
+//             dataProcessing {
+//                 10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+//                 10 {
+//                     special = browse
+//                     special {
+//                         items = up|prev|next
+//                         prevnextToSection = 0
+//                     }
+//                     levels = 1
+//                     expandAll = 1
+//                     includeSpacer = 0
+//                     titleField = nav_title // title
+//                     as = moduleBrowse
+//                     overwriteMenuLevelConfig < temp.overwriteMenuLevelConfig
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+
+// lib.primaryNavigation = JSON
+// lib.primaryNavigation {
+//     dataProcessing {
+//         10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+//         10 {
+//             special = rootline
+//             special.value = -8
+//             levels = 7
+//             expandAll = 1
+//             includeSpacer = 0
+//             titleField = nav_title // title
+//             as = primaryNavigation
+//         }
+//     }
+// }
+// lib.breadcrumbs = JSON
+// lib.breadcrumbs {
+//     dataProcessing {
+//         10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+//         10 {
+//             special = rootline
+//             expandAll = 0
+//             includeSpacer = 1
+//             titleField = nav_title // title
+//             as = breadcrumbs
+//         }
+//     }
+// }

@@ -1,0 +1,60 @@
+tt_content.mask_audiotrack >
+tt_content.mask_audiotrack =< lib.contentElementWithHeader
+tt_content.mask_audiotrack {
+    fields {
+        # Override CE type display
+        type.stdWrap.cObject = TEXT
+        type.stdWrap.cObject.value = mask_audiotrack
+
+        content {
+            fields {
+                audiofile = TEXT
+                audiofile {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = tx_mask_audiotrack_audiofile
+                            as = audiofile
+                        }
+                    }
+                }
+                subtitles = TEXT
+                subtitles {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = tx_mask_audiotrack_subtitles
+                            as = subtitles
+                        }
+                    }
+                }
+                markers = TEXT
+                markers {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+                        10 {
+                            table = tx_mask_audiotrack_markers
+                            // pidInList.field = pid
+                            where {
+                                data = field:uid
+                                wrap = parentid='|'
+                            }
+                            as = markers
+                            orderBy = sorting
+                            fields {
+                                header = TEXT
+                                header {
+                                    field = tx_mask_audiotrack_markertitle 
+                                }
+                                marker = TEXT
+                                marker {
+                                    field = tx_mask_audiotrack_marker
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

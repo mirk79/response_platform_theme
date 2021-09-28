@@ -1,0 +1,3 @@
+## Include helpers
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:response_platform_theme/Configuration/TypoScript/Helper/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:response_platform_theme/Configuration/TypoScript/Setup/" extensions="typoscript">

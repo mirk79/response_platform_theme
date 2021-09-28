@@ -1,0 +1,86 @@
+####
+# Example of what CKEditor can all bring
+###
+
+# Load default processing options
+imports:
+    - { resource: "EXT:response_platform_theme/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:response_platform_theme/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:response_platform_theme/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    # can be "default", but a custom stylesSet can be defined here, which fits TYPO3 best
+    contentsCss: ["https://use.typekit.net/pfq5rmw.css", "EXT:response_platform_theme/Resources/Public/Css/rte.css"]
+    stylesSet:
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.rte.p.small", element: "p", attributes: { class: "small"} } # Absatz mit kleinem Text
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.rte.p.large", element: "p", attributes: { class: "large"} } # Absatz mit großem Text
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h1-style", element: "div", attributes: { class: "h1-style"} } # H1-Stil
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h2-style", element: "div", attributes: { class: "h2-style"} } # H2-Stil
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h3-style", element: "div", attributes: { class: "h3-style"} } # H3-Stil
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h4-style", element: "div", attributes: { class: "h4-style"} } # H4-Stil
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h5-style", element: "div", attributes: { class: "h5-style"} } # H5-Stil
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.rte.a.button", element: "a", attributes: { class: "button"} } # Link als Button (normal)
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.rte.a.button.large", element: "a", attributes: { class: "button large"} } # Link als Button (groß)
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.rte.hr.dotted", element: "hr", attributes: { class: "dotted"} } # gestrichelte Linie
+      - { name: "LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.rte.list.highlighted", element: ["ul", "ol"], attributes: { class: "highlighted"} } # Highlight-Liste
+      #- { name: "Yellow marker", element: "span", styles: { background-color: "yellow" } }
+
+    format_tags: "p;div;h2;h3;h4;h5;h6"
+
+    toolbarGroups:
+      - { name: basicstyles, groups: [ basicstyles, list, align ] }                  # Textstile: bold italic etc ... / Absatzformate: ol, ul, blockquote ...
+      - { name: styles, groups: [ styles, format ] }                    # Stile: Vorgaben siehe "stylesSet" / Format: Vorgaben siehe "format_tags"
+      - { name: insert, groups: [ insert ] }                            # Einfügen: Sonderzeichen ...
+      - { name: links, groups: [ links ] }                              # Links und Anker
+      - { name: tools, groups: [ specialchar ] }                        # RTE maximieren
+      - "/"                                                             # Umbruch Buttonzeile
+      - { name: editing, groups: [ find, selection, spellchecker ] }    # Suche, Ersetzen, Rechtschreibung
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }       # Clipboard, Undo etc.
+      - { name: document, groups: [ mode ] }                            # Quellcode ...
+
+    # toolbar:
+    #   - [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', 'NumberedList', 'BulletedList' ]
+    #   - [ 'AlignCenter', 'Center', 'Right', 'Justify' ]
+    #   - [ 'Link', 'Unlink', 'Anchor' ]
+    #   - [ 'SpecialChar' ]
+    #   - [ 'Styles', 'Format', '-', 'CopyFormatting', 'RemoveFormat' ]
+    #   - [ 'Maximize' ]
+    #   - "/"
+    #   - [ 'Find', 'Replace', '-', 'Scayt' ]
+    #   - [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord' ]
+    #   - [ 'Undo', 'Redo' ]
+      #- [ 'Source' ]
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+      #- font
+      - find
+      #- bidi
+
+    removePlugins:
+      - image
+
+    removeButtons:
+      #- Anchor
+      #- Superscript
+      #- Subscript
+      #- Underline
+      #- Strike
+      - Table
+      # - HorizontalRule
+      - Blockquote
+
+# Allow s and u tag
+processing:
+  allowTags:
+    - s
+    - u

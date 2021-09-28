@@ -1,0 +1,14 @@
+#
+# BACKENDLAYOUTS
+#
+
+// templib.allowed {
+//   CType = gridelements,text,textpic
+// }
+lib.allowedContent = gridelements_pi1,header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages
+lib.allowedGridTypes = 1ColumnGrid,2ColumnGrid,3ColumnGrid
+
+
+mod.web_layout.BackendLayouts.default >
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:response_platform_theme/Configuration/TSConfig/Page/Mod/BackendLayouts" extensions="tsconfig">

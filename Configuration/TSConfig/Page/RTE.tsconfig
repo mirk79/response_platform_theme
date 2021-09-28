@@ -1,0 +1,18 @@
+#############
+#### RTE ####
+#############
+RTE {
+    default {
+        preset = responseStd
+    }
+}
+
+
+## https://www.clickstorm.de/blog/der-neue-typo3-rte-ckeditor/
+
+## in userTSconfig dann:
+# page.RTE.default.preset = responseStd
+
+
+## Presets für bestimmte Inhaltselemente
+#RTE.config.tt_content.tx_mask_quiz_bodytext.preset = responseStd

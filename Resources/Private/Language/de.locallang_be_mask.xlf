@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2021-06-12UTC17:30:050">
+        <header>
+            <authorName>Mirko Leyh</authorName>
+            <authorEmail>mail@mirkoleyh.de</authorEmail>
+        </header>
+        <body>
+
+            <!-- Slider Audiotrack -->
+
+            <trans-unit id="audiotrack.meta.title">
+                <source>Slider Audiotrack</source>
+                <target>Slider-Audiospur</target>
+            </trans-unit>
+            <trans-unit id="audiotrack.meta.shorttitle">
+                <source>Audiotrack</source>
+                <target>Audiospur</target>
+            </trans-unit>
+            <trans-unit id="audiotrack.meta.desc">
+                <source>Adds an audiotrack to slider pages.</source>
+                <target>Fügt eine Audiospur zu Slider-Seiten hinzu.</target>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.audiofile">
+                <source>Audio file</source>
+                <target>Audiodatei</target>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.audiofile.desc">
+                <source>Add an mp3 audio file here.</source>
+                <target>Fügen Sie hier eine mp3-Audiodatei hinzu.</target>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.subtitles">
+                <source>Subtitles</source>
+                <target>Untertitel</target>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.subtitles.desc">
+                <source>Add a vtt subtitles file for a better accessibility.</source>
+                <target>Fügen Sie eine vtt-Untertiteldatei für eine bessere Zugänglichkeit hinzu.</target>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.markers">
+                <source>Timeline markers</source>
+                <target>Zeitleisten-Marker</target>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.markers.desc">
+                <source>Add markers to the timeline for syncing the slides content elements to the audio.</source>
+                <target>Fügen Sie der Zeitleiste Marker hinzu, um die Inhaltselemente der Folie mit dem Audio zu synchronisieren.</target>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.markertitle">
+                <source>Marker title</source>
+                <target>Marker-Titel</target>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.markertitle.desc">
+                <source>The marker title will appear as a tooltip above the marker.</source>
+                <target>Der Marker-Titel wird als Tooltip über dem Marker angezeigt.</target>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.markertime">
+                <source>Time</source>
+                <target>Zeitpunkt</target>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.markertime.desc">
+                <source>Time position of the marker.</source>
+                <target>Zeitposition des Markers.</target>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.markertime.placeholder">
+                <source>minutes:seconds (1:32)</source>
+                <target>Minuten:Sekunden (1:32)</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

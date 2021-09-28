@@ -1,0 +1,32 @@
+#
+# BACKENDLAYOUT: Glossary
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            glossary {
+                title = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:backend_layout.glossary
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:backend_layout.glossary.content
+                                        colPos = 0
+                                        allowed {
+                                            CType < lib.allowedContent
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:response_platform_theme/Resources/Public/Img/BackendLayouts/BE-Layout-Glossary.png
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+tt_content.gridelements_pi1 >
+tt_content.gridelements_pi1 =< lib.contentElementWithHeader
+tt_content.gridelements_pi1 {
+    fields {
+        # Override CE type display
+        type.stdWrap.cObject = TEXT
+        type.stdWrap.cObject.value = structured_content
+
+        appearance.fields {
+            flexforms = JSON
+            flexforms {
+                dataProcessing {
+                    10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+                    10 {
+                        fieldName = pi_flexform
+                        as = flexform
+                    }
+                }
+            }
+            
+        }
+
+        content {
+            fields {
+                structure = JSON
+                structure.fields {
+                    layout = TEXT
+                    layout {
+                        field = tx_gridelements_backend_layout
+                    }
+
+                    rows = JSON
+                    rows {
+                        dataProcessing {
+                            10 = ITplusX\HeadlessGridelements\DataProcessing\GridChildrenProcessor
+                            10 {
+                                default {
+                                    as = children
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

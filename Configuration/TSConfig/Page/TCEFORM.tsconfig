@@ -1,0 +1,252 @@
+#
+# TCEFORM
+#
+
+lib.cropAspectRatioStandards {
+  NaN {
+    title = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imagecrop.free
+    value = 0.0
+  }
+  1:1 {
+    title = 1:1
+    value = 1.0
+  }
+  3:2 {
+    title = 3:2
+    value = 1.5
+  }
+  2:3 {
+    title = 2:3
+    value = 0.6666666667
+  }
+  4:3 {
+    title = 4:3
+    value = 1.3333333333
+  }
+  3:4 {
+    title = 3:4
+    value = 0.75
+  }
+  2:1 {
+    title = 2:1
+    value = 2
+  }
+  1:2 {
+    title = 1:2
+    value = 0.5
+  }
+  16:9 {
+    title = 16:9
+    value = 1.7777777778
+  }
+}
+
+TCEFORM {
+  pages {
+    subtitle.label = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:pages.labels.subtitle
+  }
+  tt_content {
+
+    # erlaubte Inhaltselemente ...
+    CType {
+        #keepItems := addToList(header,text,textpic,image,textmedia,div,shortcut,list,uploads,html,table,bullets,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages)
+        keepItems := addToList(header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages,gridelements_pi1,mask_audiotrack)
+    }
+
+    # blende Datum-Feld aus (nicht genutzt ...)
+    date.disabled = 1
+    # blende "Link zum Seitenanfang" aus (nicht genutzt)
+    linkToTop.disabled = 1
+
+    // pi_flexform {
+    //   settings.audiosync {
+    //     disabled = 0
+    //   }
+    //   disabled = 0
+    //   allowed = 1
+    // }
+    // flexformDS = FILE:EXT:response_platform_theme/Configuration/FlexForms/ContentElements.xml
+
+    # erlaubte Headline-Tags ...
+    header_layout {
+        label = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_layout
+        removeItems = 0
+        // altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
+        altLabels {
+            #0 = H2
+            1 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_layout.h1
+            2 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_layout.h2
+            3 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_layout.h3
+            4 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_layout.h4
+            5 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_layout.h5
+            #6 = H6
+            100 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_layout.hidden
+        }
+    }
+
+    # Headline Stil Override-Klassen ...
+    header_position {
+      label = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position
+    	// removeItems = center, right, left
+    	removeItems = left
+    	# represents added css class
+    	addItems {
+        h1-style = h1-style
+        h2-style = h2-style
+        h3-style = h3-style
+        h4-style = h4-style
+        h5-style = h5-style
+        // h6-style = h6-style
+    	}
+    	altLabels {
+    		h1-style = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h1-style
+    		h2-style = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h2-style
+    		h3-style = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h3-style
+    		h4-style = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h4-style
+        h5-style = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.header_position.h5-style
+        // h6-style = H6 Styling
+    	}
+    }
+    # Layout ...
+    layout {
+      // label = Darstellung
+      removeItems = 1,2,3,4,5,6,7,8,9,10
+      addItems {
+        highlightBox = highlightBox
+        borderedBox = borderedBox
+      }
+      altLabels{
+        0 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.layout.default
+        highlightBox = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.layout.highlightBox
+        borderedBox = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.layout.borderedBox
+      }
+    }
+    # Rahmen ...
+    frame_class.disabled = 1
+    # Abstände der Inhaltselemente
+    space_before_class.disabled = 1
+    space_after_class.disabled = 1
+
+    ### Images/Media: Einstellmöglichkeiten ###
+    #imagecols.removeItems = 5,6,7,8
+    imagecols.default = 2
+
+    imageorient {
+      #disabled = 1
+      #disableNoMatchingValueElement = 1
+      // removeItems = --div--,25,26
+      // removeItems = 9,10,17,18,25,26
+      default = 0
+      addItems {
+        30 = 30 
+        31 = 31 
+        32 = 32
+        33 = 33
+      }
+      altLabels {
+        # 0 = Slideshow Std., Text darunter
+        0 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.abovetext
+        # 1 = Slideshow Bildunterschriften links, Text darunter
+        1 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.abovetext.listleft
+        # 2 = Slideshow Bildunterschriften rechts, Text darunter
+        2 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.abovetext.listright
+        # 8 = Slideshow Std., Text darüber
+        8 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.belowtext
+        # 9 = Slideshow Bildunterschriften links, Text darüber
+        9 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.belowtext.listleft
+        # 10 = Slideshow Bildunterschriften rechts, Text darüber
+        10 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.belowtext.listright
+        # 17 = Slideshow Std., im Text rechts
+        17 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.intext.right
+        # 18 = Slideshow Std., Im Text links
+        18 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.intext.left
+        # --div-- = Karussell-Varianten
+        --div-- = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousels
+        # 25 = Karussell vertikal, neben Text rechts
+        25 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical.intext.right
+        # Karussell vertikal, neben Text links
+        26 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical.intext.left
+        # 30 = Karussell vertikal
+        30 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical
+        # 31 = Karussell horizontal
+        31 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.horizontal
+        # 32 = Karussell diagonal
+        32 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.diagonal
+        # 33 = Karussell als Bilderhaufen
+        33 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.picheap
+      }
+      altIcons {
+        // 0 = EXT:response_platform_theme/Resources/Public/Img/BackendLayouts/BE-Layout-Glossary.png
+        // 0 = typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/content/content-accordion.svg
+        25 = content-carousel-item-textandimage
+        26 = content-carousel-item-textandimage
+        30 = content-carousel-image
+        31 = content-carousel-image
+        32 = apps-clipboard-images
+        33 = apps-clipboard-images
+      ##  # apps-clipboard-images.svg
+        # apps-clipboard-list.svg
+        # content-accordion.svg
+        # content-beside-text-img-centered-left.svg
+        # content-beside-text-img-centered-right.svg
+      ##  # content-beside-text-img-left.svg
+      ##  # content-beside-text-img-right.svg
+        # content-card-group.svg
+        # content-card.svg
+      ##  # content-carousel-image.svg
+        # content-carousel-item-textandimage.svg
+      ##  # content-gallery.svg
+        # content-image.svg
+        # content-menu-card.svg
+        # overlay-media.svg
+
+      }
+      /*
+      # ================
+      ## imageorient Items:
+      ## Oben mittig:             0 # deaktiviert nicht bei "Nur Bilder" --- Slideshow Std., Text darunter
+      ## Oben rechts:             1 # deaktiviert nicht bei "Nur Bilder" --- Slideshow Bildunterschriften links, Text darunter
+      ## Oben links:              2 # deaktiviert nicht bei "Nur Bilder" --- Slideshow Bildunterschriften rechts, Text darunter
+      ## Unten mittig:            8 # existiert nicht bei "nur Bilder" --- Slideshow Std., Text darüber
+      ## Unten rechts:            9 # existiert nicht bei "nur Bilder" --- Slideshow Bildunterschriften links, Text darüber
+      ## Unten links:            10 # existiert nicht bei "nur Bilder" --- Slideshow Bildunterschriften rechts, Text darüber
+      ## Im Text rechts:         17 # existiert nicht bei "nur Bilder" --- Slideshow Std., im Text rechts
+      ## Im Text links:          18 # existiert nicht bei "nur Bilder" --- Slideshow Std., Im Text links
+      ## --- TRENNER ---         --div--                               --- --div-- Karussel-Varianten
+      ## Neben dem Text rechts:  25 # existiert nicht bei "nur Bilder" --- Karussell vertikal, neben Text rechts
+      ## Neben dem Text links:   26 # existiert nicht bei "nur Bilder" --- Karussell vertikal, neben Text links
+      30 --- Karussell vertikal
+      31 --- Karussell horizontal
+      32 --- Karussell diagonal
+      33 --- Karussell als Bilderhaufen
+      */
+
+    }
+
+    // imageborder.disabled = 1
+    imageheight.disabled = 1
+    imagewidth.disabled = 1
+
+    // image_zoom.disabled = 1
+    imagecaption.disabled = 0
+    imagecaption_position.disabled = 0
+
+    
+
+  }
+  # Custom Aspect Ratios for Image Cropping Tool
+    sys_file_reference.crop.config.cropVariants {
+        default {
+            title = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imagecrop.default
+            selectedRatio = NaN
+            allowedAspectRatios < lib.cropAspectRatioStandards
+        }
+        // lightbox {
+        //     title = Beschnittvarianten für Lightbox-Vergrößerung
+        //     selectedRatio = NaN
+        //     allowedAspectRatios < lib.cropAspectRatioStandards
+        // }
+    }
+}
+
+# TCEFORM.tt_content

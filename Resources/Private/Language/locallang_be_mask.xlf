@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-06-12UTC17:30:050">
+        <header>
+            <authorName>Mirko Leyh</authorName>
+            <authorEmail>mail@mirkoleyh.de</authorEmail>
+        </header>
+        <body>
+
+            <!-- Slider Audiotrack -->
+
+            <trans-unit id="audiotrack.meta.title">
+                <source>Slider Audiotrack</source>
+            </trans-unit>
+            <trans-unit id="audiotrack.meta.shorttitle">
+                <source>Audiotrack</source>
+            </trans-unit>
+            <trans-unit id="audiotrack.meta.desc">
+                <source>Adds an audiotrack to slider pages.</source>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.audiofile">
+                <source>Audio file</source>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.audiofile.desc">
+                <source>Add an mp3 audio file here.</source>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.subtitles">
+                <source>Subtitles</source>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.subtitles.desc">
+                <source>Add a vtt subtitles file for a better accessibility.</source>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.markers">
+                <source>Timeline markers</source>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.markers.desc">
+                <source>Add markers to the timeline for syncing the slides content elements to the audio.</source>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.markertitle">
+                <source>Marker title</source>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.markertitle.desc">
+                <source>The marker title will appear as a tooltip above the marker.</source>
+            </trans-unit>
+
+            <trans-unit id="audiotrack.fields.markertime">
+                <source>Time</source>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.markertime.desc">
+                <source>Time position of the marker.</source>
+            </trans-unit>
+            <trans-unit id="audiotrack.fields.markertime.placeholder">
+                <source>minutes:seconds (1:32)</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

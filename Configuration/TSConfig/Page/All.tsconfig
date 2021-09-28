@@ -1,0 +1,9 @@
+#
+# PageTS for response_platform
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:response_platform_theme/Configuration/TSConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:response_platform_theme/Configuration/TSConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:response_platform_theme/Configuration/TSConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:response_platform_theme/Configuration/TSConfig/Page/TCAdefaults.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:response_platform_theme/Configuration/TSConfig/Page/Mod/BackendLayouts.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:response_platform_theme/Configuration/TSConfig/Page/Mod/Gridelements.tsconfig">

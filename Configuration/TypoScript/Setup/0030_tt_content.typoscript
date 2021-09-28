@@ -1,0 +1,69 @@
+## Korrekturen an "appearance"-Ausgaben ...
+lib.appearance.fields {
+    frameClass >
+    spaceBefore >
+    spaceAfter >
+    layout = CASE
+    layout {
+        // key.field = layout
+        // default = TEXT
+        // default {
+        //     value = default
+        // }
+        // 1 = TEXT
+        // 1 {
+        //     value = layout-1
+        // }
+        // 2 = TEXT
+        // 2 {
+        //     value = layout-2
+        // }
+        // 3 = TEXT
+        // 3 {
+        //     value = layout-3
+        // }
+        highlightBox = TEXT
+        highlightBox {
+            value = highlightBox
+        }
+        borderedBox = TEXT
+        borderedBox {
+            value = borderedBox
+        }
+    }
+}
+
+## zusätzliche Flexform-Eigenschaften mit ausgeliefert in CE und Content-Objekt ...
+lib.additionalSettingsForCEs = JSON
+lib.additionalSettingsForCEs {
+    dataProcessing {
+        10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+        10 {
+            fieldName = additional_settings
+            as = flexform
+        }
+    }
+}
+lib.contentElement.fields.appearance.fields.additionalSettings =< lib.additionalSettingsForCEs
+lib.contentElement.fields.content.fields.additionalSettings =< lib.additionalSettingsForCEs
+
+
+## Zusatzfelder mit ausgeliefert bei Bild/Medieninhalten ...
+lib.ceImageContentAppearance = JSON
+lib.ceImageContentAppearance.fields {
+    imageorient = TEXT
+    imageorient.field = imageorient
+    imageborder = TEXT
+    imageborder.field = imageborder
+    imagecols = TEXT
+    imagecols.field = imagecols
+    imagezoom = TEXT
+    imagezoom.field = image_zoom
+    imageheight = TEXT
+    imageheight.field = imageheight
+    imagewidth = TEXT
+    imagewidth.field = imagewidth
+}
+tt_content.image.fields.content.fields.galleryAppearance =< lib.ceImageContentAppearance 
+tt_content.textpic.fields.content.fields.galleryAppearance =< lib.ceImageContentAppearance 
+tt_content.textmedia.fields.content.fields.galleryAppearance =< lib.ceImageContentAppearance

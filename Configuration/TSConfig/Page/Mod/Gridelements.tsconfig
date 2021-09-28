@@ -1,0 +1,110 @@
+tx_gridelements.overruleRecords = 1
+
+lib.allowedContentInGridelements = header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages
+
+# remove Basic Gridelements
+#tx_gridelements.setup.row >
+#tx_gridelements.setup.singleColumn >
+#tx_gridelements.setup.singleColumnHeaderFooter >
+#tx_gridelements.setup.singleColumnHorizontal >
+#tx_gridelements.setup.container >
+
+## Grid Element "1ColumnGrid" zum Zusammenfassen von Content ...
+tx_gridelements.setup.1ColumnGrid {
+	title = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.title.1ColumnGrid
+	description = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.desc.1ColumnGrid
+	icon = EXT:response_platform_theme/Resources/Public/Img/GridElements/new_content_el_Container.svg
+	config {
+		colCount = 1
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.column.content
+						colPos = 0
+						allowed {
+							CType < lib.allowedContentInGridelements
+						}
+						#allowed = *
+						// disallowed {
+						// 	#CType = text,textpic
+						// 	#tx_gridelements_backend_layout = 2ColumnContainer,3ColumnContainer
+						// }
+					}
+				}
+			}
+		}
+	}
+}
+
+## Grid Element "2ColumnGrid" zum Aufteilen von Content in zwei Spalten ...
+tx_gridelements.setup.2ColumnGrid {
+	title = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.title.2ColumnGrid
+	description = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.desc.2ColumnGrid
+	icon = EXT:response_platform_theme/Resources/Public/Img/GridElements/new_content_el_2_Column.svg
+	flexformDS = FILE:EXT:response_platform_theme/Configuration/FlexForms/2ColumnGrid.xml
+	config {
+		colCount = 2
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.column.left
+						colPos = 0
+						allowed {
+							CType < lib.allowedContentInGridelements
+						}
+					}
+					2 {
+						name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.column.right
+						colPos = 1
+						allowed {
+							CType < lib.allowedContentInGridelements
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+## Grid Element "3ColumnGrid" zum Aufteilen von Content in drei Spalten ...
+tx_gridelements.setup.3ColumnGrid {
+	title = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.title.3ColumnGrid
+	description = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.desc.3ColumnGrid
+	icon = EXT:response_platform_theme/Resources/Public/Img/GridElements/new_content_el_3_Column.svg
+	flexformDS = FILE:EXT:response_platform_theme/Configuration/FlexForms/3ColumnGrid.xml
+	config {
+		colCount = 3
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.column.left
+						colPos = 0
+						allowed {
+							CType < lib.allowedContentInGridelements
+						}
+					}
+					2 {
+						name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.column.center
+						colPos = 1
+						allowed {
+							CType < lib.allowedContentInGridelements
+						}
+					}
+					3 {
+						name = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.column.right
+						colPos = 2
+						allowed {
+							CType < lib.allowedContentInGridelements
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+### Standard: Anzahl von Spalten bei Image/Media Elementen ###
+TCAdefaults.tt_content.imagecols = 1
+TCAdefaults.tt_content.imageorient = 0
+
+### Standard Header ###
+TCAdefaults.tt_content.header_layout = 3

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<grid_options>
+			<ROOT type="array">
+				<el type="array">
+					<grid_option_flexbox type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:gridelements.grid_option_flexbox</label>
+							<config>
+								<type>check</type>
+								<items type="array">
+								<numIndex index="0" type="array">
+									<numIndex index="0">LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+									<numIndex index="1">0</numIndex>
+								</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</grid_option_flexbox>
+				</el>
+			</ROOT>
+		</grid_options>
+	</sheets>
+</T3DataStructure>

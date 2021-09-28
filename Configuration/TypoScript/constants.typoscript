@@ -1,0 +1,2 @@
+## Include helpers
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:response_platform_theme/Configuration/TypoScript/Constants/" extensions="typoscript">

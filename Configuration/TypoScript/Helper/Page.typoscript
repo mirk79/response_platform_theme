@@ -1,0 +1,22 @@
+
+lib.page.fields {
+    #title = TEXT
+    title {
+        field = subtitle // title
+        #required = 1
+    }
+    appearance.fields {
+        // layout >
+        pageColor = TEXT
+        pageColor {
+            #field = pagecolor
+            data = levelfield : -1, pagecolor, slide
+        }
+    }
+    treeLevel = TEXT
+    treeLevel {
+        data = level:1
+        intval = 1
+    }
+    moduleBulletNavigation =< lib.moduleBulletNavigation
+}
