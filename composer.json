@@ -27,5 +27,10 @@
       "role": "Developer",
       "email": "extensions@macopedia.pl"
     }
-  ]
+  ],
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "response_platform_theme"
+    }
+  }
 }
