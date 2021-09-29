@@ -59,11 +59,33 @@ lib.ceImageContentAppearance.fields {
     imagecols.field = imagecols
     imagezoom = TEXT
     imagezoom.field = image_zoom
-    imageheight = TEXT
-    imageheight.field = imageheight
-    imagewidth = TEXT
-    imagewidth.field = imagewidth
+    // imageheight = TEXT
+    // imageheight.field = imageheight
+    // imagewidth = TEXT
+    // imagewidth.field = imagewidth
 }
 tt_content.image.fields.content.fields.galleryAppearance =< lib.ceImageContentAppearance 
 tt_content.textpic.fields.content.fields.galleryAppearance =< lib.ceImageContentAppearance 
 tt_content.textmedia.fields.content.fields.galleryAppearance =< lib.ceImageContentAppearance
+
+## neues Setup für Gallerie ...
+lib.ceImageGallery = TEXT
+lib.ceImageGallery {
+    dataProcessing {
+        10 = Response\ResponsePlatformTheme\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+            as = files
+            processingConfiguration {
+                maxWidth = {$styles.content.textmedia.maxW}
+                columnSpacing = {$styles.content.textmedia.columnSpacing}
+            }
+        }
+    }
+}
+tt_content.image.fields.content.fields.gallery >
+tt_content.image.fields.content.fields.gallery < lib.ceImageGallery
+tt_content.textpic.fields.content.fields.gallery >
+tt_content.textpic.fields.content.fields.gallery < lib.ceImageGallery
+tt_content.textmedia.fields.content.fields.gallery >
+tt_content.textmedia.fields.content.fields.gallery < lib.ceImageGallery
