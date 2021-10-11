@@ -128,79 +128,76 @@ TCEFORM {
     space_after_class.disabled = 1
 
     ### Images/Media: Einstellmöglichkeiten ###
-    imagecols.removeItems = 5,6,7,8
-    imagecols.default = 2
+    imagecols {
+      label = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imagecols
+      removeItems = 5,6,7,8
+      altLabels {
+        1 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imagecols.1
+        2 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imagecols.2
+        3 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imagecols.3
+        4 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imagecols.4
+      }
+      default = 1
+    }
 
     imageorient {
       #disabled = 1
       #disableNoMatchingValueElement = 1
       // removeItems = --div--,25,26
-      // removeItems = 9,10,17,18,25,26
+      // removeItems = 1,2,9,10
       default = 0
-      addItems {
-        30 = 30 
-        31 = 31 
-        32 = 32
-        33 = 33
-      }
+      // addItems {
+      //   30 = 30 
+      //   31 = 31 
+      //   32 = 32
+      //   33 = 33
+      // }
       altLabels {
-        # 0 = Slideshow Std., Text darunter
-        0 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.abovetext
-        # 1 = Slideshow Bildunterschriften links, Text darunter
-        1 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.abovetext.listleft
-        # 2 = Slideshow Bildunterschriften rechts, Text darunter
-        2 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.abovetext.listright
-        # 8 = Slideshow Std., Text darüber
-        8 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.belowtext
-        # 9 = Slideshow Bildunterschriften links, Text darüber
-        9 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.belowtext.listleft
-        # 10 = Slideshow Bildunterschriften rechts, Text darüber
-        10 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.belowtext.listright
-        # 17 = Slideshow Std., im Text rechts
-        17 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.intext.right
-        # 18 = Slideshow Std., Im Text links
-        18 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.slideshow.intext.left
+        # 0 = Über dem Text
+        // 0 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.abovetext
+        # 8 = Unter dem Text
+        // 8 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.belowtext
         # --div-- = Karussell-Varianten
-        --div-- = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousels
-        # 25 = Karussell vertikal, neben Text rechts
-        25 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical.intext.right
-        # Karussell vertikal, neben Text links
-        26 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical.intext.left
-        # 30 = Karussell vertikal
-        30 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical
-        # 31 = Karussell horizontal
-        31 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.horizontal
-        # 32 = Karussell diagonal
-        32 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.diagonal
-        # 33 = Karussell als Bilderhaufen
-        33 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.picheap
+        --div-- = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.nolinebreak
+        // # 25 = Karussell vertikal, neben Text rechts
+        // 25 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical.intext.right
+        // # Karussell vertikal, neben Text links
+        // 26 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical.intext.left
+        // # 30 = Karussell vertikal
+        // 30 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.vertical
+        // # 31 = Karussell horizontal
+        // 31 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.horizontal
+        // # 32 = Karussell diagonal
+        // 32 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.diagonal
+        // # 33 = Karussell als Bilderhaufen
+        // 33 = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.imageorient.carousel.picheap
       }
-      altIcons {
-        // 0 = EXT:response_platform_theme/Resources/Public/Img/BackendLayouts/BE-Layout-Glossary.png
-        // 0 = typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/content/content-accordion.svg
-        25 = content-carousel-item-textandimage
-        26 = content-carousel-item-textandimage
-        30 = content-carousel-image
-        31 = content-carousel-image
-        32 = apps-clipboard-images
-        33 = apps-clipboard-images
-      ##  # apps-clipboard-images.svg
-        # apps-clipboard-list.svg
-        # content-accordion.svg
-        # content-beside-text-img-centered-left.svg
-        # content-beside-text-img-centered-right.svg
-      ##  # content-beside-text-img-left.svg
-      ##  # content-beside-text-img-right.svg
-        # content-card-group.svg
-        # content-card.svg
-      ##  # content-carousel-image.svg
-        # content-carousel-item-textandimage.svg
-      ##  # content-gallery.svg
-        # content-image.svg
-        # content-menu-card.svg
-        # overlay-media.svg
+      // altIcons {
+      //   // 0 = EXT:response_platform_theme/Resources/Public/Img/BackendLayouts/BE-Layout-Glossary.png
+      //   // 0 = typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/content/content-accordion.svg
+      //   // 25 = content-carousel-item-textandimage
+      //   // 26 = content-carousel-item-textandimage
+      //   // 30 = content-carousel-image
+      //   // 31 = content-carousel-image
+      //   // 32 = apps-clipboard-images
+      //   // 33 = apps-clipboard-images
+      // ##  # apps-clipboard-images.svg
+      //   # apps-clipboard-list.svg
+      //   # content-accordion.svg
+      //   # content-beside-text-img-centered-left.svg
+      //   # content-beside-text-img-centered-right.svg
+      // ##  # content-beside-text-img-left.svg
+      // ##  # content-beside-text-img-right.svg
+      //   # content-card-group.svg
+      //   # content-card.svg
+      // ##  # content-carousel-image.svg
+      //   # content-carousel-item-textandimage.svg
+      // ##  # content-gallery.svg
+      //   # content-image.svg
+      //   # content-menu-card.svg
+      //   # overlay-media.svg
 
-      }
+      // }
       /*
       # ================
       ## imageorient Items:

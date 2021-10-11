@@ -59,6 +59,10 @@ lib.ceImageContentAppearance.fields {
     imagecols.field = imagecols
     imagezoom = TEXT
     imagezoom.field = image_zoom
+    imagegallery = TEXT
+    imagegallery.field = image_gallery
+    imagecaptionposition = TEXT
+    imagecaptionposition.field = image_caption_position
     // imageheight = TEXT
     // imageheight.field = imageheight
     // imagewidth = TEXT

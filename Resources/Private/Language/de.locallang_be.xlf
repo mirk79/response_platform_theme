@@ -163,77 +163,81 @@
 				<target>Highlight-Liste</target>
 			</trans-unit>
 
-			<trans-unit id="contentelements.imageorient.slideshow" xml:space="preserve">
-				<source>Slideshow</source>
-				<target>Slideshow</target>
+			<trans-unit id="contentelements.imageorient.abovetext" xml:space="preserve">
+				<source>Above the text</source>
+				<target>Über dem Text</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.slideshow.abovetext" xml:space="preserve">
-				<source>Slideshow above the text</source>
-				<target>Slideshow über dem Text</target>
+			<trans-unit id="contentelements.imageorient.belowtext" xml:space="preserve">
+				<source>Below the text</source>
+				<target>Unter dem Text</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.slideshow.belowtext" xml:space="preserve">
-				<source>Slideshow below the text</source>
-				<target>Slideshow unter dem Text</target>
+			<trans-unit id="contentelements.imageorient.nolinebreak" xml:space="preserve">
+				<source>Without line break</source>
+				<target>Ohne Umbruch</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.slideshow.listleft" xml:space="preserve">
-				<source>Slideshow with captions as a list on the left</source>
-				<target>Slideshow mit Bildunterschriften als Liste links</target>
+
+
+			<trans-unit id="contentelements.imagecols" xml:space="preserve">
+				<source>Image width</source>
+				<target>Bildbreite</target>
 			</trans-unit>
-            <trans-unit id="contentelements.imageorient.slideshow.listright" xml:space="preserve">
-				<source>Slideshow with captions as a list on the right</source>
-				<target>Slideshow mit Bildunterschriften als Liste rechts</target>
+			<trans-unit id="contentelements.imagecols.1" xml:space="preserve">
+				<source>Full width</source>
+				<target>Ganze Breite</target>
 			</trans-unit>
-            <trans-unit id="contentelements.imageorient.slideshow.abovetext.listleft" xml:space="preserve">
-				<source>Slideshow above the text, with captions as a list on the left</source>
-				<target>Slideshow über dem Text, mit Bildunterschriften als Liste links</target>
+			<trans-unit id="contentelements.imagecols.2" xml:space="preserve">
+				<source>Half width</source>
+				<target>Halbe Breite</target>
 			</trans-unit>
-            <trans-unit id="contentelements.imageorient.slideshow.abovetext.listright" xml:space="preserve">
-				<source>Slideshow above the text, with captions as a list on the right</source>
-				<target>Slideshow über dem Text, mit Bildunterschriften als Liste rechts</target>
+			<trans-unit id="contentelements.imagecols.3" xml:space="preserve">
+				<source>1/3 width</source>
+				<target>1/3 Breite</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.slideshow.belowtext.listleft" xml:space="preserve">
-				<source>Slideshow below the text, with captions as a list on the left</source>
-				<target>Slideshow unter dem Text, mit Bildunterschriften als Liste links</target>
+			<trans-unit id="contentelements.imagecols.4" xml:space="preserve">
+				<source>1/4 width</source>
+				<target>1/4 Breite</target>
 			</trans-unit>
-            <trans-unit id="contentelements.imageorient.slideshow.belowtext.listright" xml:space="preserve">
-				<source>Slideshow below the text, wwith captions as a list on the right</source>
-				<target>Slideshow unter dem Text, mit Bildunterschriften als Liste rechts</target>
+
+			<trans-unit id="contentelements.image_gallery.type" xml:space="preserve">
+				<source>Gallery type</source>
+				<target>Galerie-Typ</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.slideshow.intext.left" xml:space="preserve">
-				<source>Slideshow in the text, left-sided</source>
-				<target>Slideshow im Text links</target>
+			<trans-unit id="contentelements.image_gallery.standard" xml:space="preserve">
+				<source>Standard image series</source>
+				<target>Standard-Bilderreihe</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.slideshow.intext.right" xml:space="preserve">
-				<source>Slideshow in the text, right-sided</source>
-				<target>Slideshow im Text rechts</target>
+			<trans-unit id="contentelements.image_gallery.slider" xml:space="preserve">
+				<source>Slider with crossfade</source>
+				<target>Slider mit Überblendung</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.carousels" xml:space="preserve">
-				<source>Carousel variants</source>
-				<target>Karussell-Varianten</target>
+			<trans-unit id="contentelements.image_gallery.stack" xml:space="preserve">
+				<source>Image stack</source>
+				<target>Bilderstapel</target>
 			</trans-unit>
-            <trans-unit id="contentelements.imageorient.carousel.horizontal" xml:space="preserve">
-				<source>Carousel horizontal</source>
-				<target>Karussell horizontal</target>
+			<trans-unit id="contentelements.image_gallery.stack.horizontal" xml:space="preserve">
+				<source>Image stack horizontal</source>
+				<target>Bilderstapel horizontal</target>
 			</trans-unit>
-            <trans-unit id="contentelements.imageorient.carousel.vertical" xml:space="preserve">
-				<source>Carousel vertical</source>
-				<target>Karussell vertikal</target>
+			<trans-unit id="contentelements.image_gallery.stack.vertical" xml:space="preserve">
+				<source>Image stack vertical</source>
+				<target>Bilderstapel vertikal</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.carousel.vertical.intext.left" xml:space="preserve">
-				<source>Carousel vertical in the text, left-sided</source>
-				<target>Karussell vertikal im Text links</target>
+
+			<trans-unit id="contentelements.image_caption_position" xml:space="preserve">
+				<source>Caption position</source>
+				<target>Position der Bildunterschrift</target>
 			</trans-unit>
-			<trans-unit id="contentelements.imageorient.carousel.vertical.intext.right" xml:space="preserve">
-				<source>Carousel vertical in the text, right-sided</source>
-				<target>Karussell vertikal im Text rechts</target>
+			<trans-unit id="contentelements.image_caption_position.below" xml:space="preserve">
+				<source>Below the image</source>
+				<target>Unter dem Bild</target>
 			</trans-unit>
-            <trans-unit id="contentelements.imageorient.carousel.diagonal" xml:space="preserve">
-				<source>Carousel diagonal</source>
-				<target>Karussell diagonal</target>
+			<trans-unit id="contentelements.image_caption_position.right" xml:space="preserve">
+				<source>Right next to the images</source>
+				<target>Rechts neben den Bildern</target>
 			</trans-unit>
-            <trans-unit id="contentelements.imageorient.carousel.picheap" xml:space="preserve">
-				<source>Carousel as a heap of images</source>
-				<target>Karussell als Bilderhaufen</target>
+			<trans-unit id="contentelements.image_caption_position.left" xml:space="preserve">
+				<source>Left next to the images</source>
+				<target>Links neben den Bildern</target>
 			</trans-unit>
             
             <trans-unit id="contentelements.layout.default" xml:space="preserve">
