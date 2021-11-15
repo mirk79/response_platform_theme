@@ -105,6 +105,7 @@
             <trans-unit id="contentelements.header_position.h5-style" xml:space="preserve">
 				<source>H5 styling</source>
 			</trans-unit>
+
             <trans-unit id="contentelements.rte.p.small" xml:space="preserve">
 				<source>Small text paragraph</source>
 			</trans-unit>
@@ -190,6 +191,10 @@
 			</trans-unit>
             <trans-unit id="contentelements.layout.borderedBox" xml:space="preserve">
 				<source>bordered box</source>
+			</trans-unit>
+
+			<trans-unit id="contentelements.space_before_class.default" xml:space="preserve">
+				<source>No extra spacing (default)</source>
 			</trans-unit>
 
             <trans-unit id="contentelements.imagecrop.default" xml:space="preserve">

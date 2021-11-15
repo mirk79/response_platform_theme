@@ -10,6 +10,16 @@
                 "sys_file_reference": {
                     "tx_mask_audiotrack_subtitles": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
+            },
+            "tx_mask_prognosetool_datafile_countries": {
+                "sys_file_reference": {
+                    "tx_mask_prognosetool_datafile_countries": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_prognosetool_datafile_diseases": {
+                "sys_file_reference": {
+                    "tx_mask_prognosetool_datafile_diseases": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
             }
         }
     },
@@ -35,6 +45,40 @@
                     "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markers"
                 ],
                 "shortLabel": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.meta.shorttitle"
+            },
+            "prognosetool": {
+                "color": "rgb(40, 39, 132)",
+                "columns": [
+                    "tx_mask_135bf4063ae36",
+                    "tx_mask_prognosetool_datafile_countries",
+                    "tx_mask_prognosetool_datafile_diseases"
+                ],
+                "description": "Stellt die CSV-Daten in einer Datenvisualisierung dar",
+                "hidden": "0",
+                "icon": "fa-area-chart",
+                "key": "prognosetool",
+                "label": "Prognose-Tool Datenvisualisierung",
+                "labels": [
+                    "LLL:EXT:frontend\/Resources\/Private\/Language\/locallang_ttc.xlf:palette.headers",
+                    "CSV-Daten nach L\u00e4ndern",
+                    "CSV-Daten nach Krankheiten"
+                ],
+                "shortLabel": "Prognose-Tool"
+            }
+        },
+        "palettes": {
+            "tx_mask_135bf4063ae36": {
+                "label": "LLL:EXT:frontend\/Resources\/Private\/Language\/locallang_ttc.xlf:palette.headers",
+                "showitem": [
+                    "header",
+                    "tx_mask_5c693e0ec4de48",
+                    "header_layout",
+                    "header_position",
+                    "tx_mask_ea180b1a0b3258",
+                    "header_link",
+                    "tx_mask_252bb25c596098",
+                    "subheader"
+                ]
             }
         },
         "sql": {
@@ -52,13 +96,137 @@
                 "tt_content": {
                     "tx_mask_audiotrack_subtitles": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
+            },
+            "tx_mask_prognosetool_datafile_countries": {
+                "tt_content": {
+                    "tx_mask_prognosetool_datafile_countries": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_prognosetool_datafile_diseases": {
+                "tt_content": {
+                    "tx_mask_prognosetool_datafile_diseases": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
             }
         },
         "tca": {
             "header": {
                 "coreField": 1,
+                "inPalette": 1,
+                "inlineParent": {
+                    "prognosetool": "tx_mask_135bf4063ae36"
+                },
                 "key": "header",
-                "name": "string"
+                "label": {
+                    "prognosetool": ""
+                },
+                "name": "string",
+                "order": {
+                    "prognosetool": 1
+                }
+            },
+            "header_layout": {
+                "coreField": 1,
+                "inPalette": 1,
+                "inlineParent": {
+                    "prognosetool": "tx_mask_135bf4063ae36"
+                },
+                "key": "header_layout",
+                "label": {
+                    "prognosetool": ""
+                },
+                "name": "select",
+                "order": {
+                    "prognosetool": 3
+                }
+            },
+            "header_link": {
+                "coreField": 1,
+                "inPalette": 1,
+                "inlineParent": {
+                    "prognosetool": "tx_mask_135bf4063ae36"
+                },
+                "key": "header_link",
+                "label": {
+                    "prognosetool": ""
+                },
+                "name": "link",
+                "order": {
+                    "prognosetool": 6
+                }
+            },
+            "header_position": {
+                "coreField": 1,
+                "inPalette": 1,
+                "inlineParent": {
+                    "prognosetool": "tx_mask_135bf4063ae36"
+                },
+                "key": "header_position",
+                "label": {
+                    "prognosetool": ""
+                },
+                "name": "select",
+                "order": {
+                    "prognosetool": 4
+                }
+            },
+            "subheader": {
+                "coreField": 1,
+                "inPalette": 1,
+                "inlineParent": {
+                    "prognosetool": "tx_mask_135bf4063ae36"
+                },
+                "key": "subheader",
+                "label": {
+                    "prognosetool": ""
+                },
+                "name": "string",
+                "order": {
+                    "prognosetool": 8
+                }
+            },
+            "tx_mask_135bf4063ae36": {
+                "config": {
+                    "type": "palette"
+                },
+                "description": "",
+                "key": "135bf4063ae36",
+                "name": "palette"
+            },
+            "tx_mask_252bb25c596098": {
+                "config": {
+                    "type": "linebreak"
+                },
+                "description": "",
+                "inPalette": 1,
+                "inlineParent": {
+                    "prognosetool": "tx_mask_135bf4063ae36"
+                },
+                "key": "252bb25c596098",
+                "label": {
+                    "prognosetool": ""
+                },
+                "name": "linebreak",
+                "order": {
+                    "prognosetool": 7
+                }
+            },
+            "tx_mask_5c693e0ec4de48": {
+                "config": {
+                    "type": "linebreak"
+                },
+                "description": "",
+                "inPalette": 1,
+                "inlineParent": {
+                    "prognosetool": "tx_mask_135bf4063ae36"
+                },
+                "key": "5c693e0ec4de48",
+                "label": {
+                    "prognosetool": ""
+                },
+                "name": "linebreak",
+                "order": {
+                    "prognosetool": 2
+                }
             },
             "tx_mask_audiotrack_audiofile": {
                 "allowedFileExtensions": "mp3",
@@ -119,6 +287,62 @@
                 "l10n_mode": "",
                 "name": "file",
                 "options": "file"
+            },
+            "tx_mask_ea180b1a0b3258": {
+                "config": {
+                    "type": "linebreak"
+                },
+                "description": "",
+                "inPalette": 1,
+                "inlineParent": {
+                    "prognosetool": "tx_mask_135bf4063ae36"
+                },
+                "key": "ea180b1a0b3258",
+                "label": {
+                    "prognosetool": ""
+                },
+                "name": "linebreak",
+                "order": {
+                    "prognosetool": 5
+                }
+            },
+            "tx_mask_prognosetool_datafile_countries": {
+                "allowedFileExtensions": "csv",
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "behaviour": {
+                        "allowLanguageSynchronization": 0
+                    },
+                    "maxitems": "1",
+                    "minitems": "0"
+                },
+                "description": "CSV-Datei mit den zu visualisierenden Daten nach L\u00e4ndern, ohne Krankheiten",
+                "imageoverlayPalette": 0,
+                "key": "prognosetool_datafile_countries",
+                "l10n_mode": "",
+                "name": "file",
+                "options": "file"
+            },
+            "tx_mask_prognosetool_datafile_diseases": {
+                "allowedFileExtensions": "csv",
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "behaviour": {
+                        "allowLanguageSynchronization": 0
+                    },
+                    "maxitems": "1",
+                    "minitems": "0"
+                },
+                "description": "CSV-Datei mit den zu visualisierenden Daten nach Krankheiten",
+                "imageoverlayPalette": 0,
+                "key": "prognosetool_datafile_diseases",
+                "l10n_mode": "",
+                "name": "file",
+                "options": "file"
             }
         }
     },
@@ -138,7 +362,7 @@
         "tca": {
             "tx_mask_audiotrack_marker": {
                 "config": {
-                    "eval": "uniqueInPid,nospace",
+                    "eval": "nospace",
                     "is_in": "0123456789:",
                     "placeholder": "LLL:EXT:response_platform_theme\/Resources\/Private\/Language\/locallang_be_mask.xlf:audiotrack.fields.markertime.placeholder",
                     "type": "input"

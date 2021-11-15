@@ -1,6 +1,6 @@
 tx_gridelements.overruleRecords = 1
 
-lib.allowedContentInGridelements = header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages
+lib.allowedContentInGridelements = header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages,mask_prognosetool
 
 # remove Basic Gridelements
 #tx_gridelements.setup.row >

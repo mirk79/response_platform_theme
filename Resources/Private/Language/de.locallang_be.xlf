@@ -138,6 +138,7 @@
 				<source>H5 styling</source>
 				<target>H5-Styling</target>
 			</trans-unit>
+
             <trans-unit id="contentelements.rte.p.small" xml:space="preserve">
 				<source>Small text paragraph</source>
 				<target>Absatz mit kleinem Text</target>
@@ -175,7 +176,6 @@
 				<source>Without line break</source>
 				<target>Ohne Umbruch</target>
 			</trans-unit>
-
 
 			<trans-unit id="contentelements.imagecols" xml:space="preserve">
 				<source>Image width</source>
@@ -251,6 +251,11 @@
 			<trans-unit id="contentelements.layout.borderedBox" xml:space="preserve">
 				<source>bordered box</source>
 				<target>Umrandete Box</target>
+			</trans-unit>
+
+			<trans-unit id="contentelements.space_before_class.default" xml:space="preserve">
+				<source>No extra spacing (default)</source>
+				<target>Kein extra Abstand (Standard)</target>
 			</trans-unit>
 
             <trans-unit id="contentelements.imagecrop.default" xml:space="preserve">

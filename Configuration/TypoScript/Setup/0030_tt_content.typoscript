@@ -1,8 +1,8 @@
 ## Korrekturen an "appearance"-Ausgaben ...
 lib.appearance.fields {
     frameClass >
-    spaceBefore >
-    spaceAfter >
+    // spaceBefore >
+    // spaceAfter >
     layout = CASE
     layout {
         // key.field = layout

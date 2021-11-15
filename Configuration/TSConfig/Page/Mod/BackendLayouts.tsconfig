@@ -5,7 +5,7 @@
 // templib.allowed {
 //   CType = gridelements,text,textpic
 // }
-lib.allowedContent = gridelements_pi1,header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages
+lib.allowedContent = gridelements_pi1,header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages,mask_prognosetool
 lib.allowedGridTypes = 1ColumnGrid,2ColumnGrid,3ColumnGrid
 
 

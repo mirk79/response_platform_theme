@@ -1,3 +1,4 @@
+# Mask Audiotrack
 tt_content.mask_audiotrack >
 tt_content.mask_audiotrack =< lib.contentElementWithHeader
 tt_content.mask_audiotrack {
@@ -51,6 +52,42 @@ tt_content.mask_audiotrack {
                                     field = tx_mask_audiotrack_marker
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Mask Prognosetool
+tt_content.mask_prognosetool >
+tt_content.mask_prognosetool =< lib.contentElementWithHeader
+tt_content.mask_prognosetool {
+    fields {
+        # Override CE type display
+        type.stdWrap.cObject = TEXT
+        type.stdWrap.cObject.value = mask_prognosetool
+
+        content {
+            fields {
+                datafile_countries = TEXT
+                datafile_countries {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = tx_mask_prognosetool_datafile
+                            as = datafile_countries
+                        }
+                    }
+                }
+                datafile_diseases = TEXT
+                datafile_diseases {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = tx_mask_prognosetool_datafile2
+                            as = datafile_diseases
                         }
                     }
                 }

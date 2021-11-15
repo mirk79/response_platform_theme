@@ -1,3 +1,17 @@
+page.config.additionalHeaders {
+    20 {
+        header = Access-Control-Allow-Origin: *
+        // header = Access-Control-Allow-Origin: http://response-platform.ddev.site/
+        replace = 1
+    }
+    // 30 {
+    //     // header = Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept
+    //     // header = Access-Control-Allow-Headers: *
+    //     // header = Access-Control-Allow-Credentials: true
+    //     header = Accept: */*
+    //     replace = 1
+    // }
+}
 // page.10.fields {
 //     moduleBulletNavigation =< lib.moduleBulletNavigation
 // }

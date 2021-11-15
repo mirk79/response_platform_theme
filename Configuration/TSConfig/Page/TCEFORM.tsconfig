@@ -50,7 +50,7 @@ TCEFORM {
     # erlaubte Inhaltselemente ...
     CType {
         #keepItems := addToList(header,text,textpic,image,textmedia,div,shortcut,list,uploads,html,table,bullets,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages)
-        keepItems := addToList(header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages,gridelements_pi1,mask_audiotrack)
+        keepItems := addToList(header,text,textpic,image,textmedia,div,bullets,uploads,html,menu_pages,menu_subpages,gridelements_pi1,mask_audiotrack,mask_prognosetool)
     }
 
     # blende Datum-Feld aus (nicht genutzt ...)
@@ -121,11 +121,21 @@ TCEFORM {
         borderedBox = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.layout.borderedBox
       }
     }
-    # Rahmen ...
+    # Rahmen ... 
     frame_class.disabled = 1
     # Abstände der Inhaltselemente
-    space_before_class.disabled = 1
-    space_after_class.disabled = 1
+    space_before_class.disabled = 0
+    space_before_class {
+      altLabels {
+        . = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.space_before_class.default
+      }
+    }
+    space_after_class.disabled = 0
+    space_after_class {
+      altLabels {
+        . = LLL:EXT:response_platform_theme/Resources/Private/Language/locallang_be.xlf:contentelements.space_before_class.default
+      }
+    }
 
     ### Images/Media: Einstellmöglichkeiten ###
     imagecols {
